@@ -21,6 +21,7 @@ class Manager implements Imaging {
     public function load($fileName) {
         $content = $this->imageLoader->getImageFile($fileName);
         $image = new Image($content);
+        return $image;
     }
 
 }
