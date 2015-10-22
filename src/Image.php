@@ -30,7 +30,7 @@ class Image {
         return $this->resource;
     }
 
-    public function createImage() {
+    public function outputImage() {
         switch ($this->type) {
             case IMAGETYPE_GIF:
                 return imagegif($this->resource);
