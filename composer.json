@@ -1,0 +1,9 @@
+{
+    "name": "zvax/imagize",
+    "description": "wrapper around gd images functions",
+    "autoload": {
+        "psr-4": {
+            "Imagize\\": "src/"
+        }
+    }
+}
