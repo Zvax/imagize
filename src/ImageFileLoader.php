@@ -16,9 +16,10 @@ class ImageFileLoader {
 
     public function getImageFile($fileName) {
 
-        if (!file_exists("$this->path/$fileName.png")) throw new ImageNotFoundException($fileName);
+        $path = "$this->path/$fileName.png";
+        if (!file_exists($path)) throw new ImageNotFoundException($path);
 
-        return file_get_contents("$this->path/$fileName.png");
+        return file_get_contents($path);
 
     }
 
