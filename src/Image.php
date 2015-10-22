@@ -5,24 +5,16 @@ namespace Imagize;
 class Image {
 
     private $resource;
+    private $width;
+    private $height;
 
     public function __construct($content) {
 
         $imageInfo = getimagesizefromstring($content);
+        $this->width = $imageInfo[0];
+        $this->height = $imageInfo[1];
 
-        var_dump($imageInfo);
-
-        switch ($this->Type) {
-            case IMAGETYPE_GIF:
-                $this->Ressource = imagecreatefromgif($vPath);
-                break;
-            case IMAGETYPE_JPEG:
-                $this->Ressource = imagecreatefromjpeg($vPath);
-                break;
-            case IMAGETYPE_PNG:
-                $this->Ressource = imagecreatefrompng($vPath);
-                break;
-        }
+        $this->resource = imagecreatefromstring($content);
 
     }
 
