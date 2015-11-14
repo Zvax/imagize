@@ -4,7 +4,7 @@ namespace Imagize;
 
 use Imagize\Exceptions\NotAnImageException;
 
-class Manager implements Imaging {
+class Imagize {
 
     private $imageLoader;
     private $image;
@@ -22,6 +22,10 @@ class Manager implements Imaging {
     public function save($path) {
         if ($this->image === null) throw new NotAnImageException($path);
         $this->image->sauverVersPath($path);
+    }
+
+    public function resize(Image $image, $width = 0, $height = 0) {
+        $image->resize($width, $height);
     }
 
 }
