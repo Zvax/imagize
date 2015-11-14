@@ -2,6 +2,8 @@
 
 namespace Imagize;
 
+use Imagize\Exceptions\InvalidSizeException;
+
 class Image {
 
     private $resource;
@@ -42,7 +44,15 @@ class Image {
         return false;
     }
 
-    public function redimensionner($newWidth, $newHeight) {
+    /**
+     * @param int $newWidth
+     * @param int $newHeight
+     * @throws InvalidSizeException
+     */
+    public function resize($newWidth = 0, $newHeight = 0) {
+
+        if ($newHeight === 0 && $newWidth === 0) throw new InvalidSizeException("width: $newWidth height:$newHeight");
+
         if ($newWidth === 0) {
             $ratio = $newHeight / $this->height;
             $newWidth = (int)$this->width * $ratio;
@@ -58,7 +68,7 @@ class Image {
         $this->width = $newWidth;
     }
 
-    public function sauverVersPath($path) {
+    public function save($path) {
         switch ($this->type) {
             case IMAGETYPE_GIF:
                 imagegif($this->resource, $path);
