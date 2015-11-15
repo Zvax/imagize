@@ -6,7 +6,7 @@ class FileStorage implements \ArrayAccess {
 
     private $root;
 
-    public function __construct($root = __DIR__.'/data/') {
+    public function __construct($root = __DIR__.'/../../data/images/') {
         if (!is_dir($root)) mkdir($root);
         $this->root = $root;
     }
