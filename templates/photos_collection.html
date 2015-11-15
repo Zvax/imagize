@@ -4,43 +4,68 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style type="text/css">
-        div.image {
-            width:60%;
-            margin:0 20%;
-            height:100%;
+        html {
+            height: 100%;
         }
-        .absolute {
-            position: absolute;
-            top:0;
-            left:0;
+
+        .alignerMilieu {
+            vertical-align: middle;
         }
-        .left {
-            margin-right:80%;
+
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
         }
-        .right {
-            margin-left:80%;
+
+        .clickable {
+            cursor: pointer;
         }
-        img.image {
-            margin:0 auto;
-            max-width: 100%;
-            max-height: 100%;
+
+        #blogue_fullscreen {
+            background-color: rgba(66, 72, 74, 0.7);
+            height: 100%;
+            width: 100%;
+        }
+
+        #contenu {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            text-align: center;
+        }
+
+        #image_fullscreen {
+            vertical-align: middle;
+            max-height: 95%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            font-family: verdana, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
         }
     </style>
 </head>
 <body>
-<div class="absolute left">
-    photo n. {{i}}
-    {{#avant}}
-    <a href="/before">avant</a>
-    {{/avant}}
-</div>
-<div class="absolute image">
-    <img class="image" src="/images/500/{{filename}}" alt="img">
-</div>
-<div class="absolute right">
-    {{#apres}}
-    <a href="/after">apres</a>
-    {{/apres}}
+<div id="contenu">
+    <div class="" id="blogue_fullscreen">
+        <span class="helper"></span>
+        {{#avant}}
+        <a href="/before">
+            <img style="float:left;" class="alignerMilieu" alt="before" src="/img/fleche_gauche.png">
+        </a>
+        {{/avant}}
+        <img src="/images/{{filename}}" alt="grand format" id="image_fullscreen">
+        {{#apres}}
+        <a href="/after">
+            <img style="float:right;" class="alignerMilieu" alt="next" src="/img/fleche_droite.png">
+        </a>
+        {{/apres}}
+    </div>
 </div>
 </body>
 </html>
