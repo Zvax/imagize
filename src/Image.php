@@ -12,7 +12,11 @@ class Image {
     private $type;
     private $typeString;
 
+    private $rawImage;
+
     public function __construct($content) {
+
+        $this->rawImage = $content;
 
         $imageInfo = getimagesizefromstring($content);
         $this->width = $imageInfo[0];
@@ -22,6 +26,10 @@ class Image {
 
         $this->resource = imagecreatefromstring($content);
 
+    }
+
+    public function getImageString() {
+        return $this->rawImage;
     }
 
     public function getMime() {
@@ -44,16 +52,12 @@ class Image {
         return false;
     }
 
-    /**
-     * @param int $newWidth
-     * @param int $newHeight
-     * @throws InvalidSizeException
-     */
     public function resize($newWidth = 0, $newHeight = 0) {
 
-        if ($newHeight === 0 && $newWidth === 0) throw new InvalidSizeException("width: $newWidth height:$newHeight");
-
-        if ($newWidth === 0) {
+        if ($newHeight === 0 && $newWidth === 0) {
+            $newWidth = (int)$this->width;
+            $newHeight = (int)$this->height;
+        } else if ($newWidth === 0) {
             $ratio = $newHeight / $this->height;
             $newWidth = (int)$this->width * $ratio;
 
@@ -69,6 +73,7 @@ class Image {
     }
 
     public function save($path) {
+        if (!is_dir($this->pathify($path))) mkdir($this->pathify($path),0755,true);
         switch ($this->type) {
             case IMAGETYPE_GIF:
                 imagegif($this->resource, $path);
@@ -82,4 +87,10 @@ class Image {
         }
     }
 
+
+    private function pathify($path) {
+        $bits = explode('/',"$path");
+        array_pop($bits);
+        return implode('/',$bits);
+    }
 }
