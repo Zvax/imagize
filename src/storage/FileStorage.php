@@ -2,9 +2,6 @@
 
 namespace Storage;
 
-use Imagize\Exceptions\NotAFolderException;
-use Imagize\Image;
-
 class FileStorage implements \ArrayAccess {
 
     private $root;
