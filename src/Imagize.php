@@ -59,10 +59,10 @@ class Imagize {
 
     private function act($action) {
         switch ($action) {
-            case 'avant':
+            case 'before':
                 $_SESSION['imgPos'] -= 1;
                 break;
-            case 'apres':
+            case 'after':
                 $_SESSION['imgPos'] += 1;
                 break;
         }
