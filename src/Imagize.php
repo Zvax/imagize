@@ -27,13 +27,13 @@ class Imagize {
         $this->renderer = $mustacheRenderer;
     }
 
-    public function load($fileName) {
+    private function load($fileName) {
         $content = $this->imageLoader->getImageFile($fileName);
         $this->image = new Image($content);
         return $this->image;
     }
 
-    private function makeKey($imageName,$width,$height) {
+    private function makeKey($imageName, $width, $height) {
         return "$width/$height/$imageName";
     }
 
@@ -47,13 +47,13 @@ class Imagize {
         $imageName = $params['filename'];
         $width = $params['width'];
         $height = isset($params['height']) ? $params['height'] : 0;
-        $key = $this->makeKey($imageName,$width,$height);
+        $key = $this->makeKey($imageName, $width, $height);
         if ($this->imageCaching->isCached($key)) {
             $this->output($key);
             return;
         }
         $image = $this->load($imageName);
-        $this->resize($image,$imageName,$width,$height);
+        $this->resize($image, $imageName, $width, $height);
         $this->output($key);
     }
 
@@ -89,9 +89,9 @@ class Imagize {
         $this->response->setContent($this->imageCaching->get($slug));
     }
 
-    public function resize(Image $image, $filename, $width = 0, $height = 0) {
+    private function resize(Image $image, $filename, $width = 0, $height = 0) {
         $image->resize($width, $height);
-        $this->imageCaching->cache($this->makeKey($filename,$width,$height), $image);
+        $this->imageCaching->cache($this->makeKey($filename, $width, $height), $image);
     }
 
 }
