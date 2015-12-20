@@ -1,71 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:100%;">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style type="text/css">
-        html {
-            height: 100%;
-        }
-
-        .alignerMilieu {
-            vertical-align: middle;
-        }
-
-        .helper {
-            display: inline-block;
-            height: 100%;
-            vertical-align: middle;
-        }
-
-        .clickable {
-            cursor: pointer;
-        }
-
-        #blogue_fullscreen {
-            background-color: rgba(66, 72, 74, 0.7);
-            height: 100%;
-            width: 100%;
-        }
-
-        #contenu {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            text-align: center;
-        }
-
-        #image_fullscreen {
-            vertical-align: middle;
-            max-height: 95%;
-        }
-
-        body {
-            height: 100%;
-            width: 100%;
-            font-family: verdana, sans-serif;
-            margin: 0;
-            overflow: hidden;
-            padding: 0;
-        }
-    </style>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
-<body>
-<div id="contenu">
-    <div class="" id="blogue_fullscreen">
-        <span class="helper"></span>
-        {{#avant}}
-        <a href="/before">
-            <img style="float:left;" class="alignerMilieu" alt="before" src="/img/fleche_gauche.png">
-        </a>
-        {{/avant}}
-        <img src="/images/{{filename}}" alt="grand format" id="image_fullscreen">
-        {{#apres}}
-        <a href="/after">
-            <img style="float:right;" class="alignerMilieu" alt="next" src="/img/fleche_droite.png">
-        </a>
-        {{/apres}}
-    </div>
-</div>
+<body style="height:100%;">
+{{{contenu}}}
 </body>
 </html>

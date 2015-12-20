@@ -6,6 +6,7 @@ use ALL\Templating\MustacheRenderer;
 use Http\Response;
 use Storage\ImageFileCaching;
 use Storage\ImageFileLoader;
+use Views\Explorer;
 
 class Imagize {
 
@@ -14,17 +15,20 @@ class Imagize {
     private $imageCaching;
     private $renderer;
     private $response;
+    private $view;
 
     public function __construct(
         ImageFileLoader $imageLoader,
         ImageFileCaching $imageCaching,
         Response $response,
-        MustacheRenderer $mustacheRenderer
+        MustacheRenderer $mustacheRenderer,
+        Explorer $view
     ) {
         $this->imageLoader = $imageLoader;
         $this->imageCaching = $imageCaching;
         $this->response = $response;
         $this->renderer = $mustacheRenderer;
+        $this->view = $view;
     }
 
     private function load($fileName) {
@@ -43,7 +47,14 @@ class Imagize {
         $this->response->setContent($this->imageLoader->getImageFile($filename));
     }
 
-    public function serveResized($params) {
+    public function changePath($params) {
+        $_SESSION['path'] = $params['path'];
+        $this->serveDirectory([
+            'path' => $_SESSION['path'],
+        ]);
+    }
+
+    public function serveResized($params)  {
         $imageName = $params['filename'];
         $width = $params['width'];
         $height = isset($params['height']) ? $params['height'] : 0;
@@ -72,20 +83,12 @@ class Imagize {
         if (isset($params['action'])) {
             $this->act($params['action']);
         }
-        $path = isset($params['path']) ? $params['path'] : '';
-        $images = $this->imageLoader->loadFolderImages($path);
-        $nb = count($images);
-        $i = isset($_SESSION['imgPos']) ? (int)$_SESSION['imgPos'] : 0;
-        $this->response->setContent($this->renderer->render('photos_collection', [
-            'filename' => $images[$i]['filename'],
-            'avant' => $i > 0,
-            'apres' => $i < $nb,
-            'i' => $i,
-        ]));
+        $path = isset($params['path']) ? $params['path'] : (isset($_SESSION['path']) ? $_SESSION['path'] : "");
+        $this->view->show($path);
     }
 
     private function output($slug) {
-        $this->response->setHeader('Content-Type:', 'image/png');
+        $this->response->setHeader('Content-Type', 'image/png');
         $this->response->setContent($this->imageCaching->get($slug));
     }
 

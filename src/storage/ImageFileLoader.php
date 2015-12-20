@@ -16,11 +16,17 @@ class ImageFileLoader {
         $this->extension = $extension;
     }
 
-    public function loadFolderImages($path) {
-        $files = new \DirectoryIterator("$this->path$path");
+    public function loadFolderImages() {
+        $files = new \DirectoryIterator("$this->path");
         $images = [];
         foreach ($files as $file) {
-            if ($file->getBasename() === '.' || $file->getBasename() === '..') continue;
+            if (
+                $file->getBasename() === '.'
+                || $file->getBasename() === '..'
+            )
+            {
+                continue;
+            }
             $images[] = [
                 'filename' => $file->getFilename(),
             ];
@@ -35,6 +41,11 @@ class ImageFileLoader {
 
         return file_get_contents($path);
 
+    }
+
+    public function getPath()
+    {
+        return $this->path;
     }
 
 }
