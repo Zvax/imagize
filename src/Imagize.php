@@ -93,7 +93,11 @@ class Imagize {
     }
 
     private function resize(Image $image, $filename, $width = 0, $height = 0) {
+        $start = microtime(true);
         $image->resize($width, $height);
+        $end = microtime(true);
+        $time = $end-$start;
+        file_put_contents("resized in $time seconds\n",__DIR__."/../data/logs/logs.txt",FILE_APPEND);
         $this->imageCaching->cache($this->makeKey($filename, $width, $height), $image);
     }
 
