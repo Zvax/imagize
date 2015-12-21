@@ -43,7 +43,7 @@ class Imagize {
 
     public function serveOriginal($params) {
         $filename = $params['filename'];
-        $this->response->setHeader('Content-Type:', 'image/png');
+        $this->response->setHeader('Content-Type', 'image/png');
         $this->response->setContent($this->imageLoader->getImageFile($filename));
     }
 
