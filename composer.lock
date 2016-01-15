@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e576f2582c84efbaf773db0a9c183f14",
-    "content-hash": "8171e9f7107f50c7be7305734885efbe",
+    "hash": "806f2d7dc046a303bf52e460ecec3b18",
+    "content-hash": "b0fd606db6c2690d6cc1b3aa5d032899",
     "packages": [
         {
             "name": "mustache/mustache",
@@ -97,6 +97,214 @@
                 "response"
             ],
             "time": "2015-02-01 21:52:53"
+        },
+        {
+            "name": "rdlowrey/auryn",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rdlowrey/auryn.git",
+                "reference": "1c852d48179fc931cea427e944426e40b4b8cdf9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rdlowrey/auryn/zipball/1c852d48179fc931cea427e944426e40b4b8cdf9",
+                "reference": "1c852d48179fc931cea427e944426e40b4b8cdf9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1",
+                "fabpot/php-cs-fixer": "~1.9",
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Auryn\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Ackroyd",
+                    "email": "Danack@basereality.com",
+                    "homepage": "http://www.basereality.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Levi Morrison",
+                    "email": "levim@php.net",
+                    "homepage": "http://morrisonlevi.github.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@gmail.com",
+                    "homepage": "https://github.com/rdlowrey",
+                    "role": "Creator / Main Developer"
+                }
+            ],
+            "description": "Auryn is a dependency injector for bootstrapping object-oriented PHP applications.",
+            "homepage": "https://github.com/rdlowrey/auryn",
+            "keywords": [
+                "dependency injection",
+                "dic",
+                "ioc"
+            ],
+            "time": "2015-07-16 15:13:48"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "8617895eb798b6bdb338321ce19453dc113e5675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/8617895eb798b6bdb338321ce19453dc113e5675",
+                "reference": "8617895eb798b6bdb338321ce19453dc113e5675",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-12-05 11:13:14"
+        },
+        {
+            "name": "zvax/stepping",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zvax/stepping.git",
+                "reference": "dd0dc2d49d0cfb08e5dfa614cb1b31bb49b25eb4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zvax/stepping/zipball/dd0dc2d49d0cfb08e5dfa614cb1b31bb49b25eb4",
+                "reference": "dd0dc2d49d0cfb08e5dfa614cb1b31bb49b25eb4",
+                "shasum": ""
+            },
+            "require": {
+                "rdlowrey/auryn": "v1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stepping\\": "src/",
+                    "Tests\\": "tests/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2015-12-20 19:38:06"
+        },
+        {
+            "name": "zvax/storage",
+            "version": "0.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zvax/storage.git",
+                "reference": "20e20cc3dcd80976af6ad7d32d3c92b44e4021cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zvax/storage/zipball/20e20cc3dcd80976af6ad7d32d3c92b44e4021cc",
+                "reference": "20e20cc3dcd80976af6ad7d32d3c92b44e4021cc",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Storage\\": "src/",
+                    "Tests\\": "tests/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2016-01-09 00:19:43"
+        },
+        {
+            "name": "zvax/templating",
+            "version": "0.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zvax/templating.git",
+                "reference": "df3cd9c39523439aa3bbf47df9dd72d826c37cf7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zvax/templating/zipball/df3cd9c39523439aa3bbf47df9dd72d826c37cf7",
+                "reference": "df3cd9c39523439aa3bbf47df9dd72d826c37cf7",
+                "shasum": ""
+            },
+            "require": {
+                "mustache/mustache": "2.9.*",
+                "zvax/storage": "0.0.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Templating\\": "src/",
+                    "Tests\\": "tests/src/"
+                },
+                "files": [
+                    "src/templatingFunctions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Felix Gagnon-Grenier",
+                    "email": "fractalesque@gmail.com"
+                }
+            ],
+            "description": "a simple php templates parser",
+            "time": "2016-01-06 08:51:19"
         }
     ],
     "packages-dev": [
@@ -719,67 +927,6 @@
             "time": "2015-12-08 08:47:06"
         },
         {
-            "name": "rdlowrey/auryn",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rdlowrey/auryn.git",
-                "reference": "1c852d48179fc931cea427e944426e40b4b8cdf9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rdlowrey/auryn/zipball/1c852d48179fc931cea427e944426e40b4b8cdf9",
-                "reference": "1c852d48179fc931cea427e944426e40b4b8cdf9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "athletic/athletic": "~0.1",
-                "fabpot/php-cs-fixer": "~1.9",
-                "phpunit/phpunit": "^4.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Auryn\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dan Ackroyd",
-                    "email": "Danack@basereality.com",
-                    "homepage": "http://www.basereality.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Levi Morrison",
-                    "email": "levim@php.net",
-                    "homepage": "http://morrisonlevi.github.com/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Daniel Lowrey",
-                    "email": "rdlowrey@gmail.com",
-                    "homepage": "https://github.com/rdlowrey",
-                    "role": "Creator / Main Developer"
-                }
-            ],
-            "description": "Auryn is a dependency injector for bootstrapping object-oriented PHP applications.",
-            "homepage": "https://github.com/rdlowrey/auryn",
-            "keywords": [
-                "dependency injection",
-                "dic",
-                "ioc"
-            ],
-            "time": "2015-07-16 15:13:48"
-        },
-        {
             "name": "sebastian/comparator",
             "version": "1.2.0",
             "source": {
@@ -1194,16 +1341,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "177a015cb0e19ff4a49e0e2e2c5fc1c1bee07002"
+                "reference": "3df409958a646dad2bc5046c3fb671ee24a1a691"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/177a015cb0e19ff4a49e0e2e2c5fc1c1bee07002",
-                "reference": "177a015cb0e19ff4a49e0e2e2c5fc1c1bee07002",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/3df409958a646dad2bc5046c3fb671ee24a1a691",
+                "reference": "3df409958a646dad2bc5046c3fb671ee24a1a691",
                 "shasum": ""
             },
             "require": {
@@ -1239,37 +1386,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-30 12:36:17"
-        },
-        {
-            "name": "zvax/stepping",
-            "version": "0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Zvax/stepping.git",
-                "reference": "22809431620728ab8755aac6b496a5b6630ebfd6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Zvax/stepping/zipball/22809431620728ab8755aac6b496a5b6630ebfd6",
-                "reference": "22809431620728ab8755aac6b496a5b6630ebfd6",
-                "shasum": ""
-            },
-            "require": {
-                "rdlowrey/auryn": "v1.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Stepping\\": "src/",
-                    "Tests\\": "tests/src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2015-12-14 19:48:33"
+            "time": "2015-12-26 13:39:53"
         }
     ],
     "aliases": [],

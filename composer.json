@@ -3,8 +3,10 @@
     "description": "wrapper around gd images functions and image server",
     "require": {
         "patricklouys/http": "1.2",
-        "mustache/mustache": "v2.9.0",
-        "zvax/stepping": "0.0.0"
+        "zvax/templating": "0.0.11",
+        "zvax/stepping": "0.0.*",
+        "zvax/storage": "0.0.*",
+        "symfony/finder": "3.0.*"
     },
     "require-dev": {
         "rdlowrey/auryn": ">=1.0.0",
@@ -13,8 +15,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Imagize\\": "src/",
-            "": "src/"
-        }
+            "Imagize\\": "src/"
+        },
+        "files":
+        [
+            "src/appFunctions.php"
+        ]
     }
 }
