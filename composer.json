@@ -3,7 +3,7 @@
     "description": "wrapper around gd images functions and image server",
     "require": {
         "patricklouys/http": "1.2",
-        "zvax/templating": "0.0.11",
+        "zvax/templating": "0.0.*",
         "zvax/stepping": "0.0.*",
         "zvax/storage": "0.0.*",
         "symfony/finder": "3.0.*"

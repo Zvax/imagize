@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "806f2d7dc046a303bf52e460ecec3b18",
-    "content-hash": "b0fd606db6c2690d6cc1b3aa5d032899",
+    "hash": "c82ed2a05377fb0214cc228209bb5f70",
+    "content-hash": "40761ea5287530929f3b8c567ed84104",
     "packages": [
         {
             "name": "mustache/mustache",
@@ -240,16 +240,16 @@
         },
         {
             "name": "zvax/storage",
-            "version": "0.0.7",
+            "version": "0.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zvax/storage.git",
-                "reference": "20e20cc3dcd80976af6ad7d32d3c92b44e4021cc"
+                "reference": "36576d3c6de158d9d8f3e9ea1c34467988367fd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zvax/storage/zipball/20e20cc3dcd80976af6ad7d32d3c92b44e4021cc",
-                "reference": "20e20cc3dcd80976af6ad7d32d3c92b44e4021cc",
+                "url": "https://api.github.com/repos/Zvax/storage/zipball/36576d3c6de158d9d8f3e9ea1c34467988367fd6",
+                "reference": "36576d3c6de158d9d8f3e9ea1c34467988367fd6",
                 "shasum": ""
             },
             "require-dev": {
@@ -263,20 +263,20 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2016-01-09 00:19:43"
+            "time": "2016-01-14 01:06:15"
         },
         {
             "name": "zvax/templating",
-            "version": "0.0.11",
+            "version": "0.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zvax/templating.git",
-                "reference": "df3cd9c39523439aa3bbf47df9dd72d826c37cf7"
+                "reference": "d0dd08c47a96c1576d35d4922cf99d80178f4c89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zvax/templating/zipball/df3cd9c39523439aa3bbf47df9dd72d826c37cf7",
-                "reference": "df3cd9c39523439aa3bbf47df9dd72d826c37cf7",
+                "url": "https://api.github.com/repos/Zvax/templating/zipball/d0dd08c47a96c1576d35d4922cf99d80178f4c89",
+                "reference": "d0dd08c47a96c1576d35d4922cf99d80178f4c89",
                 "shasum": ""
             },
             "require": {
@@ -304,7 +304,7 @@
                 }
             ],
             "description": "a simple php templates parser",
-            "time": "2016-01-06 08:51:19"
+            "time": "2016-01-13 19:38:14"
         }
     ],
     "packages-dev": [
@@ -558,16 +558,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "3.0.2",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "f7bb5cddf4ffe113eeb737b05241adb947b43f9d"
+                "reference": "64d40a593fc31a8abf4ce3d200147ddf8ca64e52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/f7bb5cddf4ffe113eeb737b05241adb947b43f9d",
-                "reference": "f7bb5cddf4ffe113eeb737b05241adb947b43f9d",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/64d40a593fc31a8abf4ce3d200147ddf8ca64e52",
+                "reference": "64d40a593fc31a8abf4ce3d200147ddf8ca64e52",
                 "shasum": ""
             },
             "require": {
@@ -590,7 +590,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "autoload": {
@@ -616,7 +616,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-11-12 21:08:20"
+            "time": "2016-01-11 10:05:34"
         },
         {
             "name": "phpunit/php-file-iterator",
