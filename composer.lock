@@ -4,12 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ac3e35dd24dd206dc9dc90ede1c943b8",
-    "content-hash": "29768f0f8d22e64bc34a08b65eac1126",
+    "hash": "1ee34bea044beefa16efb395a3144f8f",
+    "content-hash": "ff3306394408d9229c2c6ef4d4e3428a",
     "packages": [
         {
             "name": "zvax/storage",
-            "version": "dev-master",
+            "version": "0.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zvax/storage.git",
@@ -1076,9 +1076,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "zvax/storage": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
