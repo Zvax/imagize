@@ -4,252 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c82ed2a05377fb0214cc228209bb5f70",
-    "content-hash": "40761ea5287530929f3b8c567ed84104",
+    "hash": "ac3e35dd24dd206dc9dc90ede1c943b8",
+    "content-hash": "29768f0f8d22e64bc34a08b65eac1126",
     "packages": [
         {
-            "name": "mustache/mustache",
-            "version": "v2.9.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bobthecow/mustache.php.git",
-                "reference": "c745b01956caf27d26b55a72a90aff56bc169cd6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/c745b01956caf27d26b55a72a90aff56bc169cd6",
-                "reference": "c745b01956caf27d26b55a72a90aff56bc169cd6",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "~1.6",
-                "phpunit/phpunit": "~3.7|~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Mustache": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Justin Hileman",
-                    "email": "justin@justinhileman.info",
-                    "homepage": "http://justinhileman.com"
-                }
-            ],
-            "description": "A Mustache implementation in PHP.",
-            "homepage": "https://github.com/bobthecow/mustache.php",
-            "keywords": [
-                "mustache",
-                "templating"
-            ],
-            "time": "2015-08-15 19:23:13"
-        },
-        {
-            "name": "patricklouys/http",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PatrickLouys/http.git",
-                "reference": "a3f4b77a57a469aa9784c0059ebd30ab3284454f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PatrickLouys/http/zipball/a3f4b77a57a469aa9784c0059ebd30ab3284454f",
-                "reference": "a3f4b77a57a469aa9784c0059ebd30ab3284454f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.0.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Http\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Patrick Louys",
-                    "email": "patrick@louys.ch",
-                    "role": "Creator / Main Developer"
-                }
-            ],
-            "description": "HTTP Component",
-            "keywords": [
-                "http",
-                "request",
-                "response"
-            ],
-            "time": "2015-02-01 21:52:53"
-        },
-        {
-            "name": "rdlowrey/auryn",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rdlowrey/auryn.git",
-                "reference": "1c852d48179fc931cea427e944426e40b4b8cdf9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rdlowrey/auryn/zipball/1c852d48179fc931cea427e944426e40b4b8cdf9",
-                "reference": "1c852d48179fc931cea427e944426e40b4b8cdf9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "athletic/athletic": "~0.1",
-                "fabpot/php-cs-fixer": "~1.9",
-                "phpunit/phpunit": "^4.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Auryn\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dan Ackroyd",
-                    "email": "Danack@basereality.com",
-                    "homepage": "http://www.basereality.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Levi Morrison",
-                    "email": "levim@php.net",
-                    "homepage": "http://morrisonlevi.github.com/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Daniel Lowrey",
-                    "email": "rdlowrey@gmail.com",
-                    "homepage": "https://github.com/rdlowrey",
-                    "role": "Creator / Main Developer"
-                }
-            ],
-            "description": "Auryn is a dependency injector for bootstrapping object-oriented PHP applications.",
-            "homepage": "https://github.com/rdlowrey/auryn",
-            "keywords": [
-                "dependency injection",
-                "dic",
-                "ioc"
-            ],
-            "time": "2015-07-16 15:13:48"
-        },
-        {
-            "name": "symfony/finder",
-            "version": "v3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "8617895eb798b6bdb338321ce19453dc113e5675"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/8617895eb798b6bdb338321ce19453dc113e5675",
-                "reference": "8617895eb798b6bdb338321ce19453dc113e5675",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Finder\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Finder Component",
-            "homepage": "https://symfony.com",
-            "time": "2015-12-05 11:13:14"
-        },
-        {
-            "name": "zvax/stepping",
-            "version": "0.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Zvax/stepping.git",
-                "reference": "dd0dc2d49d0cfb08e5dfa614cb1b31bb49b25eb4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Zvax/stepping/zipball/dd0dc2d49d0cfb08e5dfa614cb1b31bb49b25eb4",
-                "reference": "dd0dc2d49d0cfb08e5dfa614cb1b31bb49b25eb4",
-                "shasum": ""
-            },
-            "require": {
-                "rdlowrey/auryn": "v1.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Stepping\\": "src/",
-                    "Tests\\": "tests/src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2015-12-20 19:38:06"
-        },
-        {
             "name": "zvax/storage",
-            "version": "0.0.8",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zvax/storage.git",
-                "reference": "36576d3c6de158d9d8f3e9ea1c34467988367fd6"
+                "reference": "f621642d30e4c34d22fbad2f042dfc394d0c79fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zvax/storage/zipball/36576d3c6de158d9d8f3e9ea1c34467988367fd6",
-                "reference": "36576d3c6de158d9d8f3e9ea1c34467988367fd6",
+                "url": "https://api.github.com/repos/Zvax/storage/zipball/f621642d30e4c34d22fbad2f042dfc394d0c79fe",
+                "reference": "f621642d30e4c34d22fbad2f042dfc394d0c79fe",
                 "shasum": ""
             },
             "require-dev": {
@@ -263,48 +32,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2016-01-14 01:06:15"
-        },
-        {
-            "name": "zvax/templating",
-            "version": "0.0.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Zvax/templating.git",
-                "reference": "d0dd08c47a96c1576d35d4922cf99d80178f4c89"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Zvax/templating/zipball/d0dd08c47a96c1576d35d4922cf99d80178f4c89",
-                "reference": "d0dd08c47a96c1576d35d4922cf99d80178f4c89",
-                "shasum": ""
-            },
-            "require": {
-                "mustache/mustache": "2.9.*",
-                "zvax/storage": "0.0.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Templating\\": "src/",
-                    "Tests\\": "tests/src/"
-                },
-                "files": [
-                    "src/templatingFunctions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Felix Gagnon-Grenier",
-                    "email": "fractalesque@gmail.com"
-                }
-            ],
-            "description": "a simple php templates parser",
-            "time": "2016-01-13 19:38:14"
+            "time": "2016-01-18 00:41:24"
         }
     ],
     "packages-dev": [
@@ -403,49 +131,6 @@
                 "object graph"
             ],
             "time": "2015-11-07 22:20:37"
-        },
-        {
-            "name": "nikic/fast-route",
-            "version": "v0.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nikic/FastRoute.git",
-                "reference": "31fa86924556b80735f98b294a7ffdfb26789f22"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/31fa86924556b80735f98b294a7ffdfb26789f22",
-                "reference": "31fa86924556b80735f98b294a7ffdfb26789f22",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FastRoute\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nikita Popov",
-                    "email": "nikic@php.net"
-                }
-            ],
-            "description": "Fast request router for PHP",
-            "keywords": [
-                "router",
-                "routing"
-            ],
-            "time": "2015-06-18 19:15:47"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -1391,7 +1076,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "zvax/storage": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
