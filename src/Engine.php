@@ -25,11 +25,22 @@ class Engine {
 
 
     public function serve($fileName, $width = 0, $height = 0)  {
-        $key = $this->makeKey($fileName, $width, $height);
-        if (!isset($this->resizedStorage[$key])) {
-            $this->resizeOriginal($fileName, $width, $height);
+        if ($width == 0 && $height == 0)
+        {
+            return $this->serveOriginal($fileName);
         }
-        return $this->resizedStorage[$key];
+        else{
+            $key = $this->makeKey($fileName, $width, $height);
+            if (!isset($this->resizedStorage[$key])) {
+                $this->resizeOriginal($fileName, $width, $height);
+            }
+            return $this->resizedStorage[$key];
+        }
+    }
+
+    private function serveOriginal($filename)
+    {
+        return $this->originalFilesLoader->getAsString($filename);
     }
 
     private function resizeOriginal($fileName, $width, $height)

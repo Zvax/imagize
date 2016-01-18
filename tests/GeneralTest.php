@@ -2,6 +2,7 @@
 
 class GeneralTest extends PHPUnit_Framework_TestCase
 {
+
     public function testBlankEngine()
     {
         $storage = new \Storage\FileStorage(__DIR__.'/images/');
@@ -11,6 +12,20 @@ class GeneralTest extends PHPUnit_Framework_TestCase
 
         $image = $engine->serve('wallpaper.jpg');
         $this->assertInternalType('string', $image);
+    }
+
+    public function testServeOriginalNoSave()
+    {
+        $storage = new \Storage\FileStorage(__DIR__.'/images/');
+        $loader = new \Storage\FileLoader(__DIR__.'/images/');
+        $engine = new \Imagize\Engine($storage, $loader);
+        if (isset($storage['0/0/wallpaper.jpg']))
+        {
+            unset($storage['0/0/wallpaper.jpg']);
+        }
+        $this->assertFalse(isset($storage['0/0/wallpaper.jpg']));
+        $engine->serve('wallpaper.jpg');
+        $this->assertFalse(isset($storage['0/0/wallpaper.jpg']));
     }
 
     public function testServingSavesResized()
